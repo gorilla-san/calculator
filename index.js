@@ -1,0 +1,5 @@
+const display = document.querySelector(".display")
+const input = document.querySelector(".input")
+const displayInput = document.querySelector(".numbersInput")
+const result = document.querySelector(".results")
+const button = document.querySelectorAll("button")

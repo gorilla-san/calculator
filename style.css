@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: rgb(63, 63, 63);
+}
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(252, 249, 245);
+    padding: 10px 10px 10px 0;
+    box-shadow: 0 0 5px 2px rgb(206, 195, 181);
+}
+
+.input {
+    display: flex;
+}
+
+.numpad {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 300px;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    width: 100px;
+    height: 70px;
+    background-color: rgba(243, 243, 243, 0.603);
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(206, 195, 181);
+    box-shadow: 0 0 2px 1px rgb(206, 195, 181);
+}
+
+button:hover {
+    background-color: white;
+}
+
+.operations {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.display {
+    height: 200px;
+    width: 440px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 10px 0 rgb(150, 230, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display h1 {
+    font-size: 40px;
+}
+
+.display h2 {
+    font-size: 60px;
+    color: rgb(0, 70, 92);
+}
+
+#clear {
+    font-size: 40px;
+}
+
+.numpad div {
+    display: flex;
+    gap: 10px;
+}
+
+.row0 {
+    align-self: end;
+    margin-right: 15px;
+}
