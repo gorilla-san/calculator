@@ -36,16 +36,21 @@ operations.forEach((button) => {
 
 numpadButtons.forEach((button) => {
         button.addEventListener("mousedown", (e) => {
-                if (operation === "") {
-                        displayInput.textContent += button.id
-                        inputVariable += button.id
-                        result.textContent = inputVariable
-                        currentResult = inputVariable
+                if (button.id === "0" && inputVariable === "") {
+                       return
                 }
-                else {  
-                        inputVariable += button.id
-                        displayInput.textContent += button.id
-                        getOperation()
+                else {
+                        if (operation === "") {
+                                displayInput.textContent += button.id
+                                inputVariable += button.id
+                                result.textContent = inputVariable
+                                currentResult = inputVariable
+                        }
+                        else {  
+                                inputVariable += button.id
+                                displayInput.textContent += button.id
+                                getOperation()
+                        }
                 }
 
         })
