@@ -69,19 +69,49 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .display h1 {
-    width: inherit;
+    width: 400px;
+    height: 100px;
     font-size: 40px;
     word-wrap: break-word;
+    overflow:  auto;
+    text-align: right;
 }
+
 
 .display h2 {
     font-size: 60px;
     color: rgb(0, 70, 92);
     word-wrap: break-word;
+    overflow: hidden;
+    width: 400px;
+    height: 100px;
+    padding-top: 20px;
+    
 }
+
+h1::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+    padding: 0;
+}
+ 
+h1::-webkit-scrollbar-track {
+    border-radius: 100px;
+}
+ 
+h1::-webkit-scrollbar-thumb {
+    background-color: #ffcc85ad;
+    border-radius: 100px;
+    height: 10px;
+    width: 10px;
+}
+
 
 #clear {
     font-size: 40px;

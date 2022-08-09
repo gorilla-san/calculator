@@ -9,7 +9,6 @@ let inputVariable = ""
 let currentResult = ""
 let operation = ""
 result.textContent = ""
-
 operations.forEach((button) => {
         button.addEventListener("mousedown", (e) => {
                 if (inputVariable === "") {
@@ -17,10 +16,9 @@ operations.forEach((button) => {
                 } 
                 else if (operation !== ""){
                         if (inputVariable !== "") {
-                                addition()
+                                operation = button.id;
                                 currentResult = parseInt(result.textContent)
                                 inputVariable = ""
-                                operation = button.id;
                                 displayInput.textContent += button.textContent;
                                 }
                         else return
@@ -47,7 +45,7 @@ numpadButtons.forEach((button) => {
                 else {  
                         inputVariable += button.id
                         displayInput.textContent += button.id
-                        addition()
+                        getOperation()
                 }
 
         })
@@ -67,8 +65,8 @@ function addition () {
         result.textContent = parseInt(currentResult) + parseInt(inputVariable)
 }
 
-function subraction () {
-        result.textContent = parseInt(currentResult) - parseInto(inputVariable)
+function subtraction () {
+        result.textContent = parseInt(currentResult) - parseInt(inputVariable)
 }
 
 function multiplication () {
@@ -82,12 +80,16 @@ function division () {
 function getOperation () {
         switch (operation) {
                 case "add":
-                        addition()
+                        addition();
+                        break;
                 case "subtract": 
-                        subraction()
+                        subtraction();
+                        break;
                 case "multiply":
-                        multiplication()
+                        multiplication();
+                        break;
                 case "divide":
-                        division()
+                        division();
+                        break;
         }
 }
