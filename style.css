@@ -72,12 +72,15 @@ button:hover {
 }
 
 .display h1 {
+    width: inherit;
     font-size: 40px;
+    word-wrap: break-word;
 }
 
 .display h2 {
     font-size: 60px;
     color: rgb(0, 70, 92);
+    word-wrap: break-word;
 }
 
 #clear {
