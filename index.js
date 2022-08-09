@@ -17,7 +17,7 @@ operations.forEach((button) => {
                 else if (operation !== ""){
                         if (inputVariable !== "") {
                                 operation = button.id;
-                                currentResult = parseInt(result.textContent)
+                                currentResult = parseFloat(result.textContent)
                                 inputVariable = ""
                                 displayInput.textContent += button.textContent;
                                 }
@@ -43,7 +43,7 @@ numpadButtons.forEach((button) => {
                         if (operation === "") {
                                 displayInput.textContent += button.id
                                 inputVariable += button.id
-                                result.textContent = inputVariable
+                                result.textContent = parseFloat(inputVariable).toFixed(1)
                                 currentResult = inputVariable
                         }
                         else {  
@@ -67,19 +67,19 @@ clear.addEventListener("mousedown", (e) => {
 
 
 function addition () {
-        result.textContent = parseInt(currentResult) + parseInt(inputVariable)
+        result.textContent = (parseFloat(currentResult) + parseFloat(inputVariable)).toFixed(1)
 }
 
 function subtraction () {
-        result.textContent = parseInt(currentResult) - parseInt(inputVariable)
+        result.textContent = (parseFloat(currentResult) - parseFloat(inputVariable)).toFixed(1)
 }
 
 function multiplication () {
-        result.textContent = parseInt(currentResult) * parseInt(inputVariable)
+        result.textContent = (parseFloat(currentResult) * parseFloat(inputVariable)).toFixed(1)
 }
 
 function division () {
-        result.textContent = parseInt(currentResult) / parseInt(inputVariable)
+        result.textContent = (parseFloat(currentResult) / parseFloat(inputVariable)).toFixed(1)
 }
 
 function getOperation () {
